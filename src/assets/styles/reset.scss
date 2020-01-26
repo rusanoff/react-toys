@@ -22,16 +22,16 @@ dd {
 }
 
 body {
+  line-height: 1.5;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 ul[class],
 ol[class] {
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 a:not([class]) {
@@ -39,8 +39,8 @@ a:not([class]) {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 article > * + * {
@@ -63,11 +63,14 @@ table {
   }
 }
 
+/* @media выражение для тех, кто не хочет видеть анимацию */
+/*
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: .01ms;
+    animation-iteration-count: 1;
+    scroll-behavior: auto;
+    transition-duration: .01ms;
   }
 }
+*/
