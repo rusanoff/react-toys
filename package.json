@@ -4,7 +4,9 @@
   "description": "Application for storing tips, tricks, examples, features and self-studied material on React.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --config=./webpack.config.js --port=8888 --progress --color"
+    "dev": "webpack-dev-server --mode=development --config=./webpack.config.babel.js --port=8888 --progress --color",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx src",
+    "eslint:dump": "eslint --print-config ./.eslintrc.js"
   },
   "repository": {
     "type": "git",
@@ -35,12 +37,24 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "autoprefixer": "^9.7.4",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-optimize-regex": "^1.1.7",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
@@ -59,5 +73,17 @@
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

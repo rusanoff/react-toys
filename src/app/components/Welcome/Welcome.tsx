@@ -3,7 +3,7 @@ import './Welcome.scss';
 import React, { FC } from 'react';
 import { FullScreen } from 'components/FullScreen';
 
-export const Welcome: FC = () => {
+export const Welcome: FC = (): JSX.Element => {
   return (
     <FullScreen>
       <header className="header">

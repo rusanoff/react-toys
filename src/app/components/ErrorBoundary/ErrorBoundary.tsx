@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
-
+import React, { PureComponent, ReactNode } from 'react';
 import { ErrorIndicator } from 'components/ErrorIndicator';
 
-export class ErrorBoundry extends Component {
+interface IState {
+  hasError: boolean;
+}
+
+export class ErrorBoundary extends PureComponent<{}, IState> {
   state = {
     hasError: false,
   };
 
-  componentDidCatch() {
+  componentDidCatch(): void {
     this.setState({
       hasError: true,
     });
   }
 
-  render() {
+  render(): ReactNode {
     const { hasError } = this.state;
     const { children } = this.props;
 

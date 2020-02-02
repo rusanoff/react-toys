@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 const DEV = process.env.NODE_ENV !== 'production';
 const { loader: miniCssExtractPluginLoader } = MiniCssExtractPlugin;
@@ -129,9 +129,7 @@ const config = {
       '.ts',
       '.tsx',
     ],
-    modules: [
-      'node_modules',
-    ],
+    modules: ['node_modules'],
   },
 };
 
