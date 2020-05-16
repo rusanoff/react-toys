@@ -1,5 +1,3 @@
 import { FullScreen } from './FullScreen';
 
-export {
-  FullScreen,
-};
+export { FullScreen };

@@ -1,0 +1,36 @@
+@import '../../../../assets/styles/variables';
+
+.navigation {
+  &-item {
+    color: $color-grey;
+    cursor: pointer;
+    min-width: 110px;
+    padding: 4px 16px;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &.active {
+      color: $color-white;
+
+      span {
+        height: 20px;
+        position: relative;
+
+        &::after {
+          border-right: 1px solid $color-white;
+          border-top: 1px solid $color-white;
+          content: ' ';
+          display: block;
+          height: 7px;
+          position: absolute;
+          right: -20px;
+          top: 7px;
+          transform: rotate(45deg);
+          width: 7px;
+        }
+      }
+    }
+  }
+}

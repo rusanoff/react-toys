@@ -25,10 +25,11 @@ module.exports = {
     "__dirname": 'readonly',
     "module": 'readonly',
     "process": 'readonly',
+    "window": 'readonly',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: 'tsconfig.json',
     sourceType: 'module',
     tsconfigRootDir: '.',
   },
@@ -145,7 +146,7 @@ module.exports = {
     "no-template-curly-in-string": 'error',
     "no-throw-literal": 'error',
     "no-trailing-spaces": 'error',
-    "no-undefined": 'error',
+    "no-undefined": 'warn',
     "no-unneeded-ternary": 'error',
     "no-unused-expressions": 'error',
     "no-useless-call": 'error',
@@ -175,7 +176,7 @@ module.exports = {
     "require-await": 'off',
     "semi": 'off',
     "semi-spacing": 'error',
-    "sort-imports": 'warn',
+    "sort-imports": 'off',
     "space-before-blocks": 'error',
     "space-before-function-paren": [
       'error',
@@ -202,6 +203,7 @@ module.exports = {
     /* Promise Rules */
 
     "promise/prefer-await-to-then": 'error',
+    "promise/always-return": 'off',
 
     /* Typescript ESLint Rules */
 
@@ -231,11 +233,12 @@ module.exports = {
       'interface',
     ],
     "@typescript-eslint/explicit-function-return-type": [
-      'error',
-      {
+      'off',
+      /*{
+        allowExpressions: true,
         allowTypedFunctionExpressions: false,
         allowHigherOrderFunctions: false,
-      }
+      }*/
     ],
     "@typescript-eslint/func-call-spacing": [
       'error',
@@ -262,6 +265,10 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": 'warn',
     "@typescript-eslint/no-extra-parens": [
       'error',
+      'all',
+      {
+        ignoreJSX: 'all',
+      },
     ],
     "@typescript-eslint/no-for-in-array": 'error',
     "@typescript-eslint/no-inferrable-types": [
@@ -278,7 +285,7 @@ module.exports = {
         ignoreEnums: true,
         enforceConst: true,
         ignoreReadonlyClassProperties: true,
-        ignore: [0, 24, 60, 1000],
+        ignore: [0, 1, 24, 60, 1000],
       }
     ],
     "@typescript-eslint/no-misused-promises": 'error',

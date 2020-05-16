@@ -10,14 +10,11 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": [
-      "es6",
-      "es7",
-      "es2017",
-      "es2018",
+      "es2020",
       "esnext",
       "dom"
     ],
-    "module": "es2015",
+    "module": "es2020",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -32,14 +29,21 @@
       "components/*": [
         "src/app/components/*"
       ],
+      "configs/*": [
+        "configs/*"
+      ],
+      "constants/*": [
+        "src/app/constants/*"
+      ],
+      "models/*": [
+        "src/app/models/*"
+      ],
       "modules/*": [
         "src/app/modules/*"
-      ],
-      "configs/*": [
-        "src/app/configs/*"
       ]
     },
     "pretty": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strictFunctionTypes": true,
@@ -51,6 +55,10 @@
     ]
   },
   "include": [
-    "./"
+    "./src",
+    "./scripts",
+    "./server",
+    "./*.js",
+    "./*.ts"
   ]
 }

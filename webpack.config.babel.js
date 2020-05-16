@@ -18,7 +18,11 @@ const config = {
   bail: !DEV,
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     historyApiFallback: true,
+    inline: true,
     open: true,
   },
   devtool: DEV ? 'eval-source-map' : 'source-map',
@@ -97,6 +101,17 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.mp3$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/sounds/[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
     strictExportPresence: true,
   },
@@ -120,8 +135,10 @@ const config = {
     alias: {
       assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'app', 'components'),
+      configs: path.resolve(__dirname, 'configs'),
+      constants: path.resolve(__dirname, 'src', 'app', 'constants'),
+      models: path.resolve(__dirname, 'src', 'app', 'models'),
       modules: path.resolve(__dirname, 'src', 'app', 'modules'),
-      configs: path.resolve(__dirname, 'src', 'app', 'configs'),
     },
     extensions: [
       '.js',

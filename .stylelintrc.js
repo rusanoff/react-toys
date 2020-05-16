@@ -14,9 +14,11 @@ module.exports = {
     // Не должно быть неизвестных правил
     "at-rule-no-unknown": true,
     // Обязательные свойства для правил
+    /*
     "at-rule-property-requirelist": {
-      // "at-rule-name": ["array", "of", "properties"]
+      "at-rule-name": ["array", "of", "properties"],
     },
+    */
     // Запретить пробелы перед точкой с запятой в правилах
     "at-rule-semicolon-space-before": 'never',
     // Запретить пустую строку перед закрывающей скобкой в блоке
@@ -205,14 +207,22 @@ module.exports = {
     "selector-combinator-space-before": 'always',
     // Наследуемые селекторы должны быть разделены только одним пробелом
     "selector-descendant-combinator-no-non-space": true,
-    // // После запятых в перечислении селекторов всегда должен быть перевод строки
-    // "selector-list-comma-newline-after": 'always',
-    // // Никогда не должно быть пробелов перед запятыми в многострочных списках селекторов
-    // "selector-list-comma-newline-before": 'never-multi-line',
-    // // Должен быть пробел после запятой в перечислениях селекторов
-    // "selector-list-comma-space-after": 'never',
-    // // Не должно быть пробела перед запятой в перечислениях селекторов
-    // "selector-list-comma-space-before": 'never',
+    // После запятых в перечислении селекторов всегда должен быть перевод строки
+    /*
+    "selector-list-comma-newline-after": 'always',
+    */
+    // Никогда не должно быть пробелов перед запятыми в многострочных списках селекторов
+    /*
+    "selector-list-comma-newline-before": 'never-multi-line',
+    */
+    // Должен быть пробел после запятой в перечислениях селекторов
+    /*
+    "selector-list-comma-space-after": 'never',
+    */
+    // Не должно быть пробела перед запятой в перечислениях селекторов
+    /*
+    "selector-list-comma-space-before": 'never',
+    */
     // Количество пустых строк между селекторами
     "selector-max-empty-lines": 0,
     // Запретить префиксы для селекторов
@@ -245,6 +255,7 @@ module.exports = {
       'vw',
       's',
       'ms',
+      'deg',
     ],
     // Значения свойств должны быть в нижнем регистре
     "value-keyword-case": 'lower',

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Route, RouteProps, Switch } from 'react-router-dom';
 
-import { routeList } from 'configs/routeList';
+import { routeList } from 'constants/route-list';
 
 export const Routes: FC = (): JSX.Element => {
   const routes = routeList.map((route: RouteProps, i: number): JSX.Element => {
